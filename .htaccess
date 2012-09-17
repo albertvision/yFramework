@@ -1,0 +1,8 @@
+Options -MultiViews -Indexes +FollowSymLinks
+
+RewriteEngine on
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [NC,QSA,L]
+ErrorDocument 403 /YGG/System/Pages/403.php
